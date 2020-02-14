@@ -1,4 +1,65 @@
 .canvas{
     position: relative;
     align-content: center;
+    padding: 2px;
+}
+body{
+    background-color: black;
+}
+
+.fontnormal{
+    font-size: 1vw;
+}
+.fontalta{
+    font-size: 1.3vw;
+}
+
+.fundo{
+    background-color: black;
+    height: 40%;
+}
+.butgame{
+    background-color: black;
+    color: darkorange;
+    border: 1vh double darkorange;
+    font-family: monster_friend_backregular;
+
+
+}
+hr{
+    background-color: black;
+}
+.chao{
+    background-color: burlywood;
+}
+.subchao{
+    background-color: darkviolet;
+}
+.barra{
+    background-color: whitesmoke;
+    width: 15vh;
+    height: 3vh;
+}
+
+.dados ul ul span{
+    color: red;
+}
+.papo{
+    font-family: monster_friend_backregular;
+    padding: 3%;
+    margin: 1%;
+    background-color: black;
+    border: 1vh double white;
+    color: whitesmoke;
+    word-wrap: break-word;
+}
+.dados{
+    color: white;
+    font-family: monster_friend_backregular;
+
+}
+.bar{
+    background-color: black;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }

@@ -1,106 +1,243 @@
 <html>
 
 <head>
-    <style>
-
-    </style>
+    <title>
+        Personal Page
+    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>Main Page</title>
+    <link rel="stylesheet" href="./css/index1.css">
+    <link rel="stylesheet" href="./font/stylesheet.css">
 
 </head>
 
-<body style="background-color: gray;">
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            <img src="./img/W.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-            @wesbdss
-        </a>
-    </nav>
-    <div class=".container-fluid" style="background-color: black; height: 350; ">
-        <div style="background-color: green; height: 5px; border-end-end-radius: 400px;"></div>
-        <h1 id="asp1" style="color:greenyellow;padding-top: 5vh; text-align: center; width: 80%;">'''</h1>
-        <h1 style="color:green; padding-top: 5vh; text-align: center;"><span style=" padding-top: 5vh; text-align:center;"><span style="color:green;" >wesbdss@github.com</span><span style="color: white;">:</span><span style="color: blue;">bin/home/homework/</span><span style="color: white;">$ </span></span><strong><span id="asp2" > _</span></strong></h1>
-        <h1 id="asp3" style="color:greenyellow; padding-top: 5vh; text-align: center; margin-left: 30%;">'''</h1>
-    </div>
-    <div class=".container">
-        <div class="row" style="margin-left: 10%; margin-right: 10%; margin-top: 1%; ">
-            <div class="col-3">
-                <div class="card" style="width: 18rem; margin-top: 1%;">
-                    <img src="./img/W.svg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Teste Card</p>
-                        <a href="./Trabalho-de-CG" style="font-size: larger;">Trabalho-de-CG</a>
-                    </div>
-                </div>
-            </div>
-
+<body>
+    <div class='container-fluid'>
+        <div class='row-1 fontnormal' style=" color: aqua; font-family: monster_friend_backregular;">
+            Chabot status: Offiline
         </div>
-    </div>
+        <div class="row fundo">
+            <div class="col-2"></div>
 
-    </div>
+            <canvas id='myCanvas' class='col-2 papo'></canvas>
 
-    </div>
-    </div>
-    <!-- Aqui tem todos os que devem ter id registrado -->
-    <div id='id1' class="container"
-        style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color: white;color: white;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;z-index:1000;">
-        <img id='id2' class="col-1" src="./img/anime1.webp"
-            style="margin-top:3px; width: 50px; height: 55px; border-radius: 100%; size: 80px;">
-        <span id="nameBot" class="col-1" style="color: black;opacity: 0;" hidden="True">Name Bot</span>
+            <div id='talk' class="col-6 papo fontnormal">
 
-        <div id='id3' class="col-12" hidden="True">
-            <div class=".chatopen" id='border1' hidden="True" style="border-style: solid; border-color: black; margin: 5px; padding:5px; margin-top: -1px;">
-
-                <div  class="row-cols-1" id='slot1' hidden="True"
-                    style="background-color: green; font-size: 20px;  border-radius: 10px; border-bottom-right-radius: 0;">
-                    <p id="resposta1" style="white-space: pre-line;">insira o texto Aqui</p>
-                </div>
-                <div class="row-cols-1" id='slot2' hidden="True"
-                    style="background-color: hotpink;font-size: 20px;  border-radius: 10px; border-bottom-left-radius: 0;">
-                    <p id="pergunta1" style="white-space: pre-line;">insira o texto Aqui</p>
-                </div>
-
+                <span>
+                    Ainda nao esta pronto amigo!</br>...
+                </span>
             </div>
-            <div class="row">
+        </div>
+        <div class="row bar fontnormal">
+            <div class="col-3"></div>
+            <div class="col dados ">wesbdss</div>
+            <div class="col dados">LV Junior</div>
+            <div class="col-2 justify-content-left">
+                <div class="row">
+                    <div class="dados" style="font-size: small; padding-right: 3px;">HP</div>
+                    <span class="barra"></span>
+                    <div class="dados" style="padding-left: 5px;">1<span
+                            style="font-family: Arial, Helvetica, sans-serif;">/</span>1</div>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row justify-content-center bar fontnormal">
+            <button class="col-2 butgame">Infos</button>
+            <div class="col-1"></div>
+            <button class="col-2 butgame">Linguagens</button>
+            <div class="col-1"></div>
+            <button class="col-2 butgame">Chat</button>
+        </div>
+        <div class="row bar justify-content-center fontnormal" hidden>
+            <div class="col-1"></div>
+            <div class="col-3"> <textarea name="" id="" cols="50" rows="1"
+                    style="justify-self: flex-end;"> Vamo ver carai</textarea></div>
+            <div class="col-1"></div>
+            <button class="col-2 butgame" style="height: 5vh;">enviar</button>
+        </div>
+        <div class="row chao justify-content-center fontnormal" style="padding-top: 5vh;">
+            <h1 class="dados fontnormal" style="text-align: center;">Linguagens</h1>
+        </div>
+        <div class="row chao fontnormal" style="padding-top: 3vh;">
+            <div class="col-5 dados fontnormal" style="text-align: center;">
                 <ul>
-                    <li>
-                        <input id="id4"  hidden="True" type="text" style=" border-radius: 20px; width: auto; font-size:16px;">
-    
-                    </li>
-                    <li>
-                        <button  id='id5' hidden="True" 
-                            style="white-space: nowrap; font-size: 20px; border-radius: 100px;"> <img
-                                src="./img/sendbut.png"
-                                id="but1" style="height: 30px;width: 30px;white-space: nowrap;" alt=""></button>
-                    </li>
+                    <ul>
+                        <hr style="opacity: 0;">
+                        <h1>Front-End</h1>
+                        <hr>
+                    </ul>
+                    <ul>Html</ul>
+                    <ul>Css</ul>
+                    <ul>Javascript</ul>
+                    <ul>ReactJS</ul>
+                    <ul>Flutter</ul>
+                    <ul>
+                        <hr style="opacity: 0;">
+                        <h1>Back-End</h1>
+                        <hr>
+                    </ul>
+                    <ul>Python</ul>
+                    <ul>Nodejs</ul>
+                    <ul>Go</ul>
+                    <ul>C <span style="font-family: Arial, Helvetica, sans-serif;font-size: x-large;">/</span> C<span
+                            style="font-family: Arial, Helvetica, sans-serif;font-size: x-large;">++</span></ul>
+                    <ul>
+                        <hr style="opacity: 0;">
+                        <h1 style="word-wrap: normal;">Databases</h1>
+                        <hr>
+                    </ul>
+                    <ul>SQL</ul>
+                    <ul>NoSQL</ul>
+                    <ul>
+                        <hr style="opacity: 0;">
+                        <h1>Diferenciais</h1>
+                        <hr>
+                    </ul>
+                    <ul>Docker</ul>
+                    <ul>Django</ul>
+                    <ul>Flask</ul>
+                    <ul>Tornado</ul>
+                    <ul>Bootstrap</ul>
+                    <ul>Tensorflow</ul>
+                    <ul>Greesock</ul>
+                    <ul>ThreeJS</ul>
                 </ul>
+            </div>
+            <div class="col-1 fontnormal" style="text-align: right;"><br></div>
+            <div class="col-5 dados fontnormal" style="text-align: center;">
+                <ul>
+                    <ul>
+                        <hr style="opacity: 0;">
+                        <h1></br></h1>
+                        <hr>
+                    </ul>
+                    <ul><span>***</span>**</ul>
+                    <ul><span>**</span>***</ul>
+                    <ul><span>****</span>*</ul>
+                    <ul><span>***</span>**</ul>
+                    <ul><span>**</span>***</ul>
+                    <ul>
+                        <hr style="opacity: 0;">
+                        <h1><br></h1>
+                        <hr>
+                    </ul>
+                    <ul><span>*****</span></ul>
+                    <ul><span>****</span>*</ul>
+                    <ul><span>****</span>*</ul>
+                    <ul><span>**</span>***</ul>
+                    <ul>
+                        <hr style="opacity: 0;">
+                        <h1><br></h1>
+                        <hr>
+                    </ul>
+                    <ul><span>***</span>**</ul>
+                    <ul><span>***</span>**</ul>
+                    <ul>
+                        <hr style="opacity: 0;">
+                        <h1><br></h1>
+                        <hr>
+                    </ul>
+                    <ul><span>****</span>*</ul>
+                    <ul><span>***</span>**</ul>
+                    <ul><span>****</span>*</ul>
+                    <ul><span>***</span>**</ul>
+                    <ul><span>****</span>*</ul>
+                    <ul><span>**</span>***</ul>
+                    <ul><span>***</span>**</ul>
+                    <ul><span>****</span>*</ul>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row subchao justify-content-center fontnormal" style="padding-top: 5vh;">
+            <h1 class="dados" style="text-align: center;">Infos</h1>
+        </div>
+        <div class="row subchao fontnormal">
+            <div class="col-1"></div>
+            <div class="col-4" style="background-color: cornflowerblue;padding-top: 5vh;">
+                <div class="col-12">
+                    <h1>Wesley Benício dos Santos Silva</h1>
+                </div>
+                <div class="col-12" style="padding-top: 10%;">
+                    <h3>Contato</h3>
+                    <hr>
+                </div>
+                <div class="col-12"> <strong>Endereço:</strong><br> Catalão - GO</div>
+                <div class="col-12"> <strong>Telefone:</strong><br> +55 (61) 991188735</div>
+                <div class="col-12"> <strong>Email:</strong><br>wesleybenicio4@gmail.com</div>
+                <div class="col-12" style="padding-top: 10%;">
+                    <h3>Proeficiências</h3>
+                    <hr>
+                </div>
+                <div class="col-12">
+                    <ul>
+                        <li>Auto Gestão</li>
+                        <li>Proativo</li>
+                        <li>Serviço Focado</li>
+                        <li>Trabalho em Equipe</li>
+                        <li>Boa Liderança</li>
+                        <li>Gerenciamento de Projetos</li>
+                    </ul>
+                </div>
+                <div class="col-12" style="padding-top: 10%;">
+                    <h3>Idiomas</h3>
+                    <hr>
+                </div>
+                <div class="col-12">
+                    <ul>
+                        <li>Inglês <span style="font-family: monster_friend_backregular; color: crimson;">**</span><span
+                                style="font-family: monster_friend_backregular; ">*</spam></span></li>
+                        <li>Espanhol <span
+                                style="font-family: monster_friend_backregular; color: crimson;">**</span><span
+                                style="font-family: monster_friend_backregular; ">*</spam>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
-            
+            <div class="col-6" style="color: white;">
+                <div class="col-12" style="padding-top: 12%;">
+                    <h3>Resumo</h3>
+                    <hr>
+                </div>
+                <div class="col-12">
+                    Sou programador Python a 3 anos, com aplicação em trabalhos e
+                    Hackathons, atualmente na área de pesquisa sobre chatbots e
+                    PNL (Processamento de Linguagem Natural). Aprofundando
+                    atualmente ferramentas FontEnd como React,js e mobile com
+                    Flutter. Em busca de experiência com trabalhos remotos.</div>
+                <div class="col-12" style="padding-top: 10%;">
+                    <h3>Experiência</h3>
+                    <hr>
+                </div>
+                <div class="col-12">
+                    Nenhuma :(, me contrata pf
+                </div>
+                <div class="col-12" style="padding-top: 10%;">
+                    <h3>Educação</h3>
+                    <hr>
+                </div>
+                <div class="col-12">
+                    Bacharelado: <strong>Ciência da Computação</strong> - 2017-2021 <br> <strong>Universidade
+                        Federal de
+                        Goiás - RC</strong>, Catalão,GO.
+                </div>
+            </div>
 
+        </div>
 
-
+        <div class="row fontnormal" style="background-color: black; position: relative; bottom: 0; width: 100%;">
+            <div class="col-6" style="text-align: left; color: lawngreen;">Inspirado em Undertale</div>
+            <div class="col-6" style="text-align: right;color: lawngreen;">Criado por Wesley</div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="./js/index.js"></script>
-
+    <script src="./js/three.js"></script>
+    <script src="./js/index1.js"></script>
 </body>
 
 </html>
