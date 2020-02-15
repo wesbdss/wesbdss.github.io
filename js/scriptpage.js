@@ -76,7 +76,7 @@ $("div.row.subchao").hide();
 $("div.row.chao").hide();
 $("#pap").hide();
 
-talk("Seja Bem Vindo, nao estou funcionado ainda, tenha calma!!");
+talk("Seja Bem Vindo, Clique em tudo quer tiver curiosidade!");
 
 
 // 
