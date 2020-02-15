@@ -1,73 +1,78 @@
 <html>
 
 <head>
-    <title>
+    <title style="font-family:  monster_friend_backregular;">
         Personal Page
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/index1.css">
     <link rel="stylesheet" href="./font/stylesheet.css">
+    <audio id="song">
+        <source src="./sound/just-sans-talking.mp3" type="audio/mp3">
+    </audio>
 
 </head>
 
 <body>
     <div class='container-fluid'>
-        <div class='row-1 fontnormal' style=" color: aqua; font-family: monster_friend_backregular;">
-            Chabot status: Offiline
+        <div id='statusbot' class='row-1 fontnormal' style=" color: aqua; font-family: monster_friend_backregular;">
+            Chatbot Status: Offline
         </div>
+        <!-- Fundo Principal -->
         <div class="row fundo">
-            <div class="col-2"></div>
+            <div class="col-md-2"></div>
+            <!-- Visualização do Chat -->
+            <canvas id='myCanvas' class='col-md-2 papo' height="2vh" width="3vw"></canvas>
 
-            <canvas id='myCanvas' class='col-2 papo'></canvas>
-
-            <div id='talk' class="col-6 papo fontnormal">
-
-                <span>
+            <div class="col-md-6 papo fontnormal">
+                <!-- Onde vai ocorrer a troca de mensagens -->
+                <p id='talk' style="text-align: center;">
                     Ainda nao esta pronto amigo!</br>...
-                </span>
+                </p>
             </div>
         </div>
         <div class="row bar fontnormal">
-            <div class="col-3"></div>
-            <div class="col dados ">wesbdss</div>
-            <div class="col dados">LV Junior</div>
-            <div class="col-2 justify-content-left">
+            <div class="col-md-3"></div>
+            <div class="col dados " id='nickname'>wesbdss</div>
+            <div class="col dados" id="lv">LV Junior</div>
+            <div class="col-md-2 justify-content-left">
                 <div class="row">
-                    <div class="dados" style="font-size: small; padding-right: 3px;">HP</div>
-                    <span class="barra"></span>
-                    <div class="dados" style="padding-left: 5px;">1<span
-                            style="font-family: Arial, Helvetica, sans-serif;">/</span>1</div>
+                    <div class="dados" style="font-size: 1vw; padding-right: 3px;" id='vida'>HP</div>
+                    <span class="barra" style="font-size: 3vw;" id='vida'></span>
+                    <div class="dados" style="padding-left: 5px;" id='vida'>1
+                        <span style="font-family: Arial, Helvetica, sans-serif;" id='vida'>/</span>1</div>
                 </div>
             </div>
-            <div class="col-3"></div>
+            <div class="col-md-3"></div>
         </div>
         <div class="row justify-content-center bar fontnormal">
-            <button class="col-2 butgame">Infos</button>
-            <div class="col-1"></div>
-            <button class="col-2 butgame">Linguagens</button>
-            <div class="col-1"></div>
-            <button class="col-2 butgame">Chat</button>
+            <button id="botao1" class="col-md-2 butgame">Infos</button>
+            <div class="col-md-1"></div>
+            <button id="botao2" class="col-md-2 butgame">Linguagens</button>
+            <div class="col-md-1"></div>
+            <button id="botao3" class="col-md-2 butgame">Chat</button>
         </div>
-        <div class="row bar justify-content-center fontnormal" hidden>
-            <div class="col-1"></div>
-            <div class="col-3"> <textarea name="" id="" cols="50" rows="1"
-                    style="justify-self: flex-end;"> Vamo ver carai</textarea></div>
-            <div class="col-1"></div>
-            <button class="col-2 butgame" style="height: 5vh;">enviar</button>
+        <div id="pap" class="row bar justify-content-center fontnormal">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <input type="text" id="text" style="justify-self: flex-end; border-radius: 10px; font-size: 3vh;">
+                </div>
+            <div class="col-md-1"></div>
+            <button id='sendbot' class="col-md-2 butgame" style="height: 5vh;">enviar</button>
         </div>
-        <div class="row chao justify-content-center fontnormal" style="padding-top: 5vh;">
-            <h1 class="dados fontnormal" style="text-align: center;">Linguagens</h1>
+
+        <div id='pag1' class="row chao justify-content-center" style="padding-top: 5vh;">
+            <span class="dados" style="font-size: 5vw;">Linguagens</span>
         </div>
-        <div class="row chao fontnormal" style="padding-top: 3vh;">
-            <div class="col-5 dados fontnormal" style="text-align: center;">
+        <div id='pag1.1' class="row chao fontnormal" style="padding-top: 3vh;">
+            <div class="col-md-5 dados" style="text-align: center;">
                 <ul>
-                    <ul>
+                    <ul style="font-size: 3vw;">
                         <hr style="opacity: 0;">
-                        <h1>Front-End</h1>
+                        Front-End
                         <hr>
                     </ul>
                     <ul>Html</ul>
@@ -75,9 +80,9 @@
                     <ul>Javascript</ul>
                     <ul>ReactJS</ul>
                     <ul>Flutter</ul>
-                    <ul>
+                    <ul style="font-size: 3vw;">
                         <hr style="opacity: 0;">
-                        <h1>Back-End</h1>
+                        Back-End
                         <hr>
                     </ul>
                     <ul>Python</ul>
@@ -87,14 +92,14 @@
                             style="font-family: Arial, Helvetica, sans-serif;font-size: x-large;">++</span></ul>
                     <ul>
                         <hr style="opacity: 0;">
-                        <h1 style="word-wrap: normal;">Databases</h1>
+                        <h1 style="word-wrap: normal; font-size: 3vw;">Databases</h1>
                         <hr>
                     </ul>
                     <ul>SQL</ul>
                     <ul>NoSQL</ul>
-                    <ul>
+                    <ul style="font-size: 3vw;">
                         <hr style="opacity: 0;">
-                        <h1>Diferenciais</h1>
+                        Diferenciais
                         <hr>
                     </ul>
                     <ul>Docker</ul>
@@ -107,12 +112,12 @@
                     <ul>ThreeJS</ul>
                 </ul>
             </div>
-            <div class="col-1 fontnormal" style="text-align: right;"><br></div>
-            <div class="col-5 dados fontnormal" style="text-align: center;">
+            <div class="col-md-1 fontnormal" style="text-align: right;"><br></div>
+            <div class="col-md-5 dados fontnormal" style="text-align: center;">
                 <ul>
-                    <ul>
+                    <ul style="font-size: 3vw;">
                         <hr style="opacity: 0;">
-                        <h1></br></h1>
+                        </br>
                         <hr>
                     </ul>
                     <ul><span>***</span>**</ul>
@@ -120,25 +125,25 @@
                     <ul><span>****</span>*</ul>
                     <ul><span>***</span>**</ul>
                     <ul><span>**</span>***</ul>
-                    <ul>
+                    <ul style="font-size: 3vw;">
                         <hr style="opacity: 0;">
-                        <h1><br></h1>
+                        <br>
                         <hr>
                     </ul>
                     <ul><span>*****</span></ul>
                     <ul><span>****</span>*</ul>
                     <ul><span>****</span>*</ul>
                     <ul><span>**</span>***</ul>
-                    <ul>
+                    <ul style="font-size: 3vw;">
                         <hr style="opacity: 0;">
-                        <h1><br></h1>
+                        <br>
                         <hr>
                     </ul>
                     <ul><span>***</span>**</ul>
                     <ul><span>***</span>**</ul>
-                    <ul>
+                    <ul style="font-size: 3vw;">
                         <hr style="opacity: 0;">
-                        <h1><br></h1>
+                        <br>
                         <hr>
                     </ul>
                     <ul><span>****</span>*</ul>
@@ -153,27 +158,27 @@
             </div>
         </div>
 
-        <div class="row subchao justify-content-center fontnormal" style="padding-top: 5vh;">
-            <h1 class="dados" style="text-align: center;">Infos</h1>
+        <div id='pag2' class="row subchao justify-content-center fontnormal" style="padding-top: 5vh;">
+            <span class="dados" style="text-align: center;font-size: 5vw;">Infos</span>
         </div>
-        <div class="row subchao fontnormal">
-            <div class="col-1"></div>
-            <div class="col-4" style="background-color: cornflowerblue;padding-top: 5vh;">
-                <div class="col-12">
-                    <h1>Wesley Benício dos Santos Silva</h1>
+        <div id='pag2.1' class="row subchao fontnormal">
+            <div class="col-md-1"></div>
+            <div class="col-md-4" style="background-color: cornflowerblue;padding-top: 5vh;">
+                <div class="col-md-12" style="font-size: 3vw;">
+                    <strong>Wesley Benício dos Santos Silva</strong>
                 </div>
-                <div class="col-12" style="padding-top: 10%;">
-                    <h3>Contato</h3>
+                <div class="col-md-12" style="padding-top: 10%;">
+                    <strong style="font-size: 2vw;">Contato</strong>
                     <hr>
                 </div>
-                <div class="col-12"> <strong>Endereço:</strong><br> Catalão - GO</div>
-                <div class="col-12"> <strong>Telefone:</strong><br> +55 (61) 991188735</div>
-                <div class="col-12"> <strong>Email:</strong><br>wesleybenicio4@gmail.com</div>
-                <div class="col-12" style="padding-top: 10%;">
-                    <h3>Proeficiências</h3>
+                <div class="col-md-12"> <strong>Endereço:</strong><br> Catalão - GO</div>
+                <div class="col-md-12"> <strong>Telefone:</strong><br> +55 (61) 991188735</div>
+                <div class="col-md-12"> <strong>Email:</strong><br>wesleybenicio4@gmail.com</div>
+                <div class="col-md-12" style="padding-top: 10%;">
+                    <strong style="font-size: 2vw;">Proficiências</strong>
                     <hr>
                 </div>
-                <div class="col-12">
+                <div class="col-md-12 fontnormal">
                     <ul>
                         <li>Auto Gestão</li>
                         <li>Proativo</li>
@@ -183,11 +188,11 @@
                         <li>Gerenciamento de Projetos</li>
                     </ul>
                 </div>
-                <div class="col-12" style="padding-top: 10%;">
-                    <h3>Idiomas</h3>
+                <div class="col-md-12" style="padding-top: 10%;">
+                    <strong style="font-size: 2vw;">Idiomas</strong>
                     <hr>
                 </div>
-                <div class="col-12">
+                <div class="col-md-12">
                     <ul>
                         <li>Inglês <span style="font-family: monster_friend_backregular; color: crimson;">**</span><span
                                 style="font-family: monster_friend_backregular; ">*</spam></span></li>
@@ -199,29 +204,29 @@
                 </div>
 
             </div>
-            <div class="col-6" style="color: white;">
-                <div class="col-12" style="padding-top: 12%;">
-                    <h3>Resumo</h3>
+            <div class="col-md-6" style="color: white;">
+                <div class="col-md-12" style="padding-top: 12%;">
+                    <strong style="font-size: 2vw;">Resumo</strong>
                     <hr>
                 </div>
-                <div class="col-12">
+                <div class="col-md-12">
                     Sou programador Python a 3 anos, com aplicação em trabalhos e
                     Hackathons, atualmente na área de pesquisa sobre chatbots e
                     PNL (Processamento de Linguagem Natural). Aprofundando
                     atualmente ferramentas FontEnd como React,js e mobile com
                     Flutter. Em busca de experiência com trabalhos remotos.</div>
-                <div class="col-12" style="padding-top: 10%;">
-                    <h3>Experiência</h3>
+                <div class="col-md-12" style="padding-top: 10%;">
+                    <strong style="font-size: 2vw;">Experiência</strong>
                     <hr>
                 </div>
-                <div class="col-12">
+                <div class="col-md-12">
                     Nenhuma :(, me contrata pf
                 </div>
-                <div class="col-12" style="padding-top: 10%;">
-                    <h3>Educação</h3>
+                <div class="col-md-12" style="padding-top: 10%;">
+                    <Strong style="font-size: 2vw;">Educação</Strong>
                     <hr>
                 </div>
-                <div class="col-12">
+                <div class="col-md-12">
                     Bacharelado: <strong>Ciência da Computação</strong> - 2017-2021 <br> <strong>Universidade
                         Federal de
                         Goiás - RC</strong>, Catalão,GO.
@@ -229,14 +234,21 @@
             </div>
 
         </div>
-
+        <div class="row" id='inicio'>
+            <div class="col-md-12" style="text-align: center;">
+                <canvas class='papo' id='passive' height="200px" width="200px" hidden></canvas>
+                <img src="./img/sansgif.gif" alt="">
+            </div>
+        </div>
         <div class="row fontnormal" style="background-color: black; position: relative; bottom: 0; width: 100%;">
-            <div class="col-6" style="text-align: left; color: lawngreen;">Inspirado em Undertale</div>
-            <div class="col-6" style="text-align: right;color: lawngreen;">Criado por Wesley</div>
+            <div class="col-md-6" style="text-align: left; color: lawngreen;">Inspirado em Undertale</div>
+            <div class="col-md-6" style="text-align: right;color: lawngreen;">Criado por Wesley</div>
         </div>
     </div>
 
     <script src="./js/three.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/scriptpage.js"></script>
     <script src="./js/index1.js"></script>
 </body>
 

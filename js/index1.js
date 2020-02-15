@@ -1,9 +1,9 @@
 var c = document.getElementById('myCanvas');
 
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(75, 350 / 250, 0.1, 1000);
+var camera = new THREE.PerspectiveCamera(75, c.offsetWidth / c.offsetHeight, 0.1, 1000);
 var renderer = new THREE.WebGLRenderer({ canvas: c, antialias: true });
-renderer.setSize(350, 250)
+renderer.setSize(c.offsetWidth, c.offsetWidth)
 camera.position.set(0, 0, 2);
 camera.lookAt(0, 0, 0);
 
@@ -45,3 +45,5 @@ function animate() {
 
 animate();
 console.log("è pra rodar");
+
+
