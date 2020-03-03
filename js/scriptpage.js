@@ -5,6 +5,7 @@ $('#botao2').click(function () {
     if ($("div.row.chao").is(":hidden")) {
         $("div.row.chao").toggle("fast");
         $('#inicio').hide();
+        $("div.row.subchao").hide();
     } else {
         $("div.row.chao").hide();
     }
@@ -18,6 +19,7 @@ $('#botao2').click(function () {
 $('#botao1').click(function () {
     if ($("div.row.subchao").is(":hidden")) {
         $("div.row.subchao").toggle("fast");
+        $("div.row.chao").hide();
         $('#inicio').hide();
     } else {
         $("div.row.subchao").hide();
