@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4c46b791.chunk.css",
+    "main.js": "/static/js/main.5adbea9c.chunk.js",
+    "main.js.map": "/static/js/main.5adbea9c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.87409604.js",
+    "runtime-main.js.map": "/static/js/runtime-main.87409604.js.map",
+    "static/js/2.6426d951.chunk.js": "/static/js/2.6426d951.chunk.js",
+    "static/js/2.6426d951.chunk.js.map": "/static/js/2.6426d951.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.18f9c7e704b8d0a7cb3227d5196efa23.js": "/precache-manifest.18f9c7e704b8d0a7cb3227d5196efa23.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4c46b791.chunk.css.map": "/static/css/main.4c46b791.chunk.css.map",
+    "static/js/2.6426d951.chunk.js.LICENSE.txt": "/static/js/2.6426d951.chunk.js.LICENSE.txt",
+    "static/media/facebook-svgrepo-com.svg": "/static/media/facebook-svgrepo-com.d8d7cc10.svg",
+    "static/media/smile-svgrepo-com.svg": "/static/media/smile-svgrepo-com.2732a716.svg",
+    "static/media/video-svgrepo-com.svg": "/static/media/video-svgrepo-com.d694f24d.svg",
+    "static/media/video.svg": "/static/media/video.34ea85af.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.87409604.js",
+    "static/js/2.6426d951.chunk.js",
+    "static/css/main.4c46b791.chunk.css",
+    "static/js/main.5adbea9c.chunk.js"
+  ]
+}
