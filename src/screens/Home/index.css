@@ -1,0 +1,79 @@
+    html,
+    body {
+        overflow-x: hidden;
+        background-size: 400% 400%;
+    }
+    
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: content-box;
+    }
+    /* 
+        Center Body
+    */
+    
+    .body_center {
+        display: flex;
+        width: 70%;
+        flex-direction: column;
+    }
+    
+    .body_dir {}
+    
+    .container_body {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    /* 
+        Left Body
+    */
+    
+    .body_esq {
+        display: flex;
+        width: 20%;
+        flex-direction: column;
+    }
+    /* 
+        Rigth Body
+    */
+    
+     ::-webkit-scrollbar {
+        background-color: #18191a;
+        width: 5px;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        background-color: #b0b3b8;
+        border-radius: 20px;
+    }
+    
+    .body {
+        display: flex;
+        background: linear-gradient(140deg, rgba(24, 25, 26, 1) 0%, rgba(24, 25, 26, 0.9) 18%, rgba(24, 25, 26, 1) 35%, rgba(24, 25, 26, 0.9) 50%, rgba(24, 25, 26, 1) 67%, rgba(24, 25, 26, 0.9) 84%, rgba(24, 25, 26, 1) 100%);
+        background-size: 800% 800%;
+        background-position: center center;
+        /* background: rgb(24, 25, 26); */
+        animation: gradientAnimation 10s ease-in-out infinite;
+        /* -webkit-animation: gradientAnimation 30s ease infinite; */
+        /* -moz-animation: gradientAnimation 30s ease infinite; */
+    }
+    
+    hr {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }

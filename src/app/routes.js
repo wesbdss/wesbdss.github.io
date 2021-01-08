@@ -24,6 +24,7 @@ export default function () {
             <Switch>
                 <Route exact path="/" component={Screens.Home} />
                 <PrivateRoute exact path="/easteregg" component={Screens.EasterEgg} />
+                <Redirect to='/'></Redirect>
             </Switch>
         </BrowserRouter>
 
