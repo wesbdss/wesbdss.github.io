@@ -1,0 +1,38 @@
+<aiml>
+   <category>
+      <pattern>OI *</pattern>
+      <template>
+         Olá $name$!
+      </template>
+   </category>
+   <category>
+      <pattern>* SEGREDO * </pattern>
+      <template>
+         Dica: Likes
+      </template>
+   </category>
+   <category>
+      <pattern>* SEGREDO?</pattern>
+      <template>
+         Dica: Likes
+      </template>
+   </category>
+   <category>
+      <pattern>NAO ENTENDI</pattern>
+      <template>
+         Pensa ai!
+      </template>
+   </category>
+   <category>
+      <pattern>* CORNO?</pattern>
+      <template>
+      Sim
+      </template>
+   </category>
+   <category>
+      <pattern>*</pattern>
+      <template>
+      Não entendi o que você falou! 
+      </template>
+   </category>
+</aiml>

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+.model2d_root {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    height: 60%;
+    align-self: center;
+    background-image: url("/assets/bg_main.png");
+    background-size: cover;
+}
+
+.model2d_chat {
+    margin-top: 5px;
+    width: 50%;
+    height: auto;
+    border: 3px solid black;
+    border-radius: 5px 5px 0px 5px;
+    align-self: center;
+    background-color: white;
+}
+
+.model2d_chat p {
+    text-align: center;
+    font-family: "Hachi Maru Pop";
+    margin: 4%;
+    word-wrap: break-word;
+}
+
+.model2d_persona canvas {
+    width: 80%;
+    align-self: center;
+}
+
+.model2d_persona {
+    width: auto;
+}
