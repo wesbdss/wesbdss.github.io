@@ -1,255 +1,31 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title style="font-family:  monster_friend_backregular;">
-        Personal Page
-    </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/index1.css">
-    <link rel="stylesheet" href="./font/stylesheet.css">
-    <audio id="song">
-        <source src="./sound/just-sans-talking.mp3" type="audio/mp3">
-    </audio>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Site</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
-    <div class='container-fluid'>
-        <div id='statusbot' class='row-1 fontnormal' style=" color: aqua; font-family: monster_friend_backregular;">
-            Chatbot Status: Offline
-        </div>
-        <!-- Fundo Principal -->
-        <div class="row fundo">
-            <div class="col-md-2"></div>
-            <!-- Visualização do Chat -->
-            <canvas id='myCanvas' class='col-md-2 papo' height="2vh" width="3vw"></canvas>
 
-            <div class="col-md-6 papo fontnormal">
-                <!-- Onde vai ocorrer a troca de mensagens -->
-                <p id='talk' style="text-align: center;">
-                    Ainda nao esta pronto amigo!</br>...
-                </p>
-            </div>
+    <section id="loading-screen">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
         </div>
-        <div class="row bar fontnormal">
-            <div class="col-md-3"></div>
-            <div class="col dados " id='nickname'>wesbdss</div>
-            <div class="col dados" id="lv">LV Junior</div>
-            <div class="col-md-2 justify-content-left">
-                <div class="row">
-                    <div class="dados" style="font-size: 1vw; padding-right: 3px;" id='vida'>HP</div>
-                    <span class="barra" style="font-size: 3vw;" id='vida'></span>
-                    <div class="dados" style="padding-left: 5px;" id='vida'>1
-                        <span style="font-family: Arial, Helvetica, sans-serif;" id='vida'>/</span>1</div>
-                </div>
-            </div>
-            <div class="col-md-3"></div>
-        </div>
-        <div class="row justify-content-center bar fontnormal">
-            <button id="botao1" class="col-md-2 butgame">Infos</button>
-            <div class="col-md-1"></div>
-            <button id="botao2" class="col-md-2 butgame">Linguagens</button>
-            <div class="col-md-1"></div>
-            <button id="botao3" class="col-md-2 butgame">Chat</button>
-        </div>
-        <div id="pap" class="row bar justify-content-center fontnormal">
-            <div class="col-md-1"></div>
-            <div class="col-md-3">
-                <input type="text" id="text" style="justify-self: flex-end; border-radius: 10px; font-size: 3vh;">
-                </div>
-            <div class="col-md-1"></div>
-            <button id='sendbot' class="col-md-2 butgame" style="height: 5vh;">enviar</button>
-        </div>
+    </section>
 
-        <div id='pag1' class="row chao justify-content-center" style="padding-top: 5vh;">
-            <span class="dados" style="font-size: 5vw;">Linguagens</span>
-        </div>
-        <div id='pag1.1' class="row chao fontnormal" style="padding-top: 3vh;">
-            <div class="col-md-5 dados" style="text-align: center;">
-                <ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        Front-End
-                        <hr>
-                    </ul>
-                    <ul>Html</ul>
-                    <ul>Css</ul>
-                    <ul>Javascript</ul>
-                    <ul>ReactJS</ul>
-                    <ul>Flutter</ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        Back-End
-                        <hr>
-                    </ul>
-                    <ul>Python</ul>
-                    <ul>Nodejs</ul>
-                    <ul>Go</ul>
-                    <ul>C <span style="font-family: Arial, Helvetica, sans-serif;font-size: x-large;">/</span> C<span
-                            style="font-family: Arial, Helvetica, sans-serif;font-size: x-large;">++</span></ul>
-                    <ul>
-                        <hr style="opacity: 0;">
-                        <h1 style="word-wrap: normal; font-size: 3vw;">Databases</h1>
-                        <hr>
-                    </ul>
-                    <ul>SQL</ul>
-                    <ul>NoSQL</ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        Diferenciais
-                        <hr>
-                    </ul>
-                    <ul>Docker</ul>
-                    <ul>Django</ul>
-                    <ul>Flask</ul>
-                    <ul>Tornado</ul>
-                    <ul>Bootstrap</ul>
-                    <ul>Tensorflow</ul>
-                    <ul>Greesock</ul>
-                    <ul>ThreeJS</ul>
-                </ul>
-            </div>
-            <div class="col-md-1 fontnormal" style="text-align: right;"><br></div>
-            <div class="col-md-5 dados fontnormal" style="text-align: center;">
-                <ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        </br>
-                        <hr>
-                    </ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>**</span>***</ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>**</span>***</ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        <br>
-                        <hr>
-                    </ul>
-                    <ul><span>*****</span></ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>**</span>***</ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        <br>
-                        <hr>
-                    </ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>***</span>**</ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        <br>
-                        <hr>
-                    </ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>**</span>***</ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>****</span>*</ul>
-                </ul>
-            </div>
-        </div>
 
-        <div id='pag2' class="row subchao justify-content-center fontnormal" style="padding-top: 5vh;">
-            <span class="dados" style="text-align: center;font-size: 5vw;">Infos</span>
-        </div>
-        <div id='pag2.1' class="row subchao fontnormal">
-            <div class="col-md-1"></div>
-            <div class="col-md-4" style="background-color: cornflowerblue;padding-top: 5vh;">
-                <div class="col-md-12" style="font-size: 3vw;">
-                    <strong>Wesley Benício dos Santos Silva</strong>
-                </div>
-                <div class="col-md-12" style="padding-top: 10%;">
-                    <strong style="font-size: 2vw;">Contato</strong>
-                    <hr>
-                </div>
-                <div class="col-md-12"> <strong>Endereço:</strong><br> Catalão - GO</div>
-                <div class="col-md-12"> <strong>Telefone:</strong><br> Indisponível temporariamente</div>
-                <div class="col-md-12"> <strong>Email:</strong><br>wesleybenicio4@gmail.com</div>
-                <div class="col-md-12" style="padding-top: 10%;">
-                    <strong style="font-size: 2vw;">Proficiências</strong>
-                    <hr>
-                </div>
-                <div class="col-md-12 fontnormal">
-                    <ul>
-                        <li>Auto Gestão</li>
-                        <li>Proativo</li>
-                        <li>Serviço Focado</li>
-                        <li>Trabalho em Equipe</li>
-                        <li>Boa Liderança</li>
-                        <li>Gerenciamento de Projetos</li>
-                    </ul>
-                </div>
-                <div class="col-md-12" style="padding-top: 10%;">
-                    <strong style="font-size: 2vw;">Idiomas</strong>
-                    <hr>
-                </div>
-                <div class="col-md-12">
-                    <ul>
-                        <li>Inglês <span style="font-family: monster_friend_backregular; color: crimson;">*</span><span
-                                style="font-family: monster_friend_backregular; ">**</spam></span></li>
-                        <li>Espanhol <span
-                                style="font-family: monster_friend_backregular; color: crimson;">*</span><span
-                                style="font-family: monster_friend_backregular; ">**</spam>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="col-md-6" style="color: white;">
-                <div class="col-md-12" style="padding-top: 12%;">
-                    <strong style="font-size: 2vw;">Resumo</strong>
-                    <hr>
-                </div>
-                <div class="col-md-12">
-                    Sou programador Python a 3 anos, com aplicação em trabalhos e
-                    Hackathons, atualmente na área de pesquisa sobre chatbots e
-                    PNL (Processamento de Linguagem Natural). Aprofundando
-                    atualmente ferramentas FontEnd como React,js e mobile com
-                    Flutter. Em busca de experiência com trabalhos remotos.</div>
-                <div class="col-md-12" style="padding-top: 10%;">
-                    <strong style="font-size: 2vw;">Experiência</strong>
-                    <hr>
-                </div>
-                <div class="col-md-12">
-                    Nenhuma :(, me contrata pf
-                </div>
-                <div class="col-md-12" style="padding-top: 10%;">
-                    <Strong style="font-size: 2vw;">Educação</Strong>
-                    <hr>
-                </div>
-                <div class="col-md-12">
-                    Bacharelado: <strong>Ciência da Computação</strong> - 2017-2021 <br> <strong>Universidade
-                        Federal de
-                        Goiás - RC</strong>, Catalão,GO.
-                </div>
-            </div>
-
-        </div>
-        <div class="row" id='inicio'>
-            <div class="col-md-12" style="text-align: center;">
-                <canvas class='papo' id='passive' height="200px" width="200px" hidden></canvas>
-                <img src="./img/sansgif.gif" alt="">
-            </div>
-        </div>
-        <div class="row fontnormal" style="background-color: black; position: relative; bottom: 0; width: 100%;">
-            <div class="col-md-6" style="text-align: left; color: lawngreen;">Inspirado em Undertale</div>
-            <div class="col-md-6" style="text-align: right;color: lawngreen;">Criado por Wesley</div>
-        </div>
-    </div>
-
-    <script src="./js/three.js"></script>
-    <script src="./js/jquery-3.4.1.min.js"></script>
-    <script src="./js/scriptpage.js"></script>
-    <script src="./js/index1.js"></script>
+    <script src="assets/js/libs/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/libs/three.js"></script>
+    <script src="assets/js/index.js" type="module"></script>
 </body>
 
 </html>
