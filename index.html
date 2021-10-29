@@ -1,255 +1,225 @@
-<html>
+<!DOCTYPE html>
+<html lang="br">
 
 <head>
-    <title style="font-family:  monster_friend_backregular;">
-        Personal Page
-    </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/index1.css">
-    <link rel="stylesheet" href="./font/stylesheet.css">
-    <audio id="song">
-        <source src="./sound/just-sans-talking.mp3" type="audio/mp3">
-    </audio>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyGithub</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
-<body>
-    <div class='container-fluid'>
-        <div id='statusbot' class='row-1 fontnormal' style=" color: aqua; font-family: monster_friend_backregular;">
-            Chatbot Status: Offline
-        </div>
-        <!-- Fundo Principal -->
-        <div class="row fundo">
-            <div class="col-md-2"></div>
-            <!-- Visualização do Chat -->
-            <canvas id='myCanvas' class='col-md-2 papo' height="2vh" width="3vw"></canvas>
+<body class="container ">
 
-            <div class="col-md-6 papo fontnormal">
-                <!-- Onde vai ocorrer a troca de mensagens -->
-                <p id='talk' style="text-align: center;">
-                    Ainda nao esta pronto amigo!</br>...
-                </p>
-            </div>
-        </div>
-        <div class="row bar fontnormal">
-            <div class="col-md-3"></div>
-            <div class="col dados " id='nickname'>wesbdss</div>
-            <div class="col dados" id="lv">LV Junior</div>
-            <div class="col-md-2 justify-content-left">
-                <div class="row">
-                    <div class="dados" style="font-size: 1vw; padding-right: 3px;" id='vida'>HP</div>
-                    <span class="barra" style="font-size: 3vw;" id='vida'></span>
-                    <div class="dados" style="padding-left: 5px;" id='vida'>1
-                        <span style="font-family: Arial, Helvetica, sans-serif;" id='vida'>/</span>1</div>
-                </div>
-            </div>
-            <div class="col-md-3"></div>
-        </div>
-        <div class="row justify-content-center bar fontnormal">
-            <button id="botao1" class="col-md-2 butgame">Infos</button>
-            <div class="col-md-1"></div>
-            <button id="botao2" class="col-md-2 butgame">Linguagens</button>
-            <div class="col-md-1"></div>
-            <button id="botao3" class="col-md-2 butgame">Chat</button>
-        </div>
-        <div id="pap" class="row bar justify-content-center fontnormal">
-            <div class="col-md-1"></div>
-            <div class="col-md-3">
-                <input type="text" id="text" style="justify-self: flex-end; border-radius: 10px; font-size: 3vh;">
-                </div>
-            <div class="col-md-1"></div>
-            <button id='sendbot' class="col-md-2 butgame" style="height: 5vh;">enviar</button>
-        </div>
+    <section class="h-auto">
+        <div class='smartphone'>
 
-        <div id='pag1' class="row chao justify-content-center" style="padding-top: 5vh;">
-            <span class="dados" style="font-size: 5vw;">Linguagens</span>
-        </div>
-        <div id='pag1.1' class="row chao fontnormal" style="padding-top: 3vh;">
-            <div class="col-md-5 dados" style="text-align: center;">
-                <ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        Front-End
-                        <hr>
-                    </ul>
-                    <ul>Html</ul>
-                    <ul>Css</ul>
-                    <ul>Javascript</ul>
-                    <ul>ReactJS</ul>
-                    <ul>Flutter</ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        Back-End
-                        <hr>
-                    </ul>
-                    <ul>Python</ul>
-                    <ul>Nodejs</ul>
-                    <ul>Go</ul>
-                    <ul>C <span style="font-family: Arial, Helvetica, sans-serif;font-size: x-large;">/</span> C<span
-                            style="font-family: Arial, Helvetica, sans-serif;font-size: x-large;">++</span></ul>
-                    <ul>
-                        <hr style="opacity: 0;">
-                        <h1 style="word-wrap: normal; font-size: 3vw;">Databases</h1>
-                        <hr>
-                    </ul>
-                    <ul>SQL</ul>
-                    <ul>NoSQL</ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        Diferenciais
-                        <hr>
-                    </ul>
-                    <ul>Docker</ul>
-                    <ul>Django</ul>
-                    <ul>Flask</ul>
-                    <ul>Tornado</ul>
-                    <ul>Bootstrap</ul>
-                    <ul>Tensorflow</ul>
-                    <ul>Greesock</ul>
-                    <ul>ThreeJS</ul>
-                </ul>
-            </div>
-            <div class="col-md-1 fontnormal" style="text-align: right;"><br></div>
-            <div class="col-md-5 dados fontnormal" style="text-align: center;">
-                <ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        </br>
-                        <hr>
-                    </ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>**</span>***</ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>**</span>***</ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        <br>
-                        <hr>
-                    </ul>
-                    <ul><span>*****</span></ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>**</span>***</ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        <br>
-                        <hr>
-                    </ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>***</span>**</ul>
-                    <ul style="font-size: 3vw;">
-                        <hr style="opacity: 0;">
-                        <br>
-                        <hr>
-                    </ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>****</span>*</ul>
-                    <ul><span>**</span>***</ul>
-                    <ul><span>***</span>**</ul>
-                    <ul><span>****</span>*</ul>
-                </ul>
-            </div>
-        </div>
+            <div class="p-3 pt-5 screen m-auto">
+                <div class="bg-light m-0 px-3" style='height:20px; width:99%;border-radius: 15px 15px 0 0;'>
+                    <div class="row">
+                        <div class="col d-flex ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+                                <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/>
+                                <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
+                              </svg>
+                        </div>
+                        <div id="time" class="col text-center ">
+                            00:00
+                        </div>
+                        <div class="col d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-broadcast-pin" viewBox="0 0 16 16">
+                                <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8z"/>
+                              </svg>
 
-        <div id='pag2' class="row subchao justify-content-center fontnormal" style="padding-top: 5vh;">
-            <span class="dados" style="text-align: center;font-size: 5vw;">Infos</span>
-        </div>
-        <div id='pag2.1' class="row subchao fontnormal">
-            <div class="col-md-1"></div>
-            <div class="col-md-4" style="background-color: cornflowerblue;padding-top: 5vh;">
-                <div class="col-md-12" style="font-size: 3vw;">
-                    <strong>Wesley Benício dos Santos Silva</strong>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi-1" viewBox="0 0 16 16">
+                                <path d="M11.046 10.454c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.611-.091l.015-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.708-.707z"/>
+                              </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-half" viewBox="0 0 16 16">
+                                <path d="M2 6h5v4H2V6z"/>
+                                <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h10zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8z"/>
+                              </svg>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="col-md-12" style="padding-top: 10%;">
-                    <strong style="font-size: 2vw;">Contato</strong>
-                    <hr>
-                </div>
-                <div class="col-md-12"> <strong>Endereço:</strong><br> Catalão - GO</div>
-                <div class="col-md-12"> <strong>Telefone:</strong><br> Indisponível temporariamente</div>
-                <div class="col-md-12"> <strong>Email:</strong><br>wesleybenicio4@gmail.com</div>
-                <div class="col-md-12" style="padding-top: 10%;">
-                    <strong style="font-size: 2vw;">Proficiências</strong>
-                    <hr>
-                </div>
-                <div class="col-md-12 fontnormal">
-                    <ul>
-                        <li>Auto Gestão</li>
-                        <li>Proativo</li>
-                        <li>Serviço Focado</li>
-                        <li>Trabalho em Equipe</li>
-                        <li>Boa Liderança</li>
-                        <li>Gerenciamento de Projetos</li>
-                    </ul>
-                </div>
-                <div class="col-md-12" style="padding-top: 10%;">
-                    <strong style="font-size: 2vw;">Idiomas</strong>
-                    <hr>
-                </div>
-                <div class="col-md-12">
-                    <ul>
-                        <li>Inglês <span style="font-family: monster_friend_backregular; color: crimson;">*</span><span
-                                style="font-family: monster_friend_backregular; ">**</spam></span></li>
-                        <li>Espanhol <span
-                                style="font-family: monster_friend_backregular; color: crimson;">*</span><span
-                                style="font-family: monster_friend_backregular; ">**</spam>
-                        </li>
-                    </ul>
+                <div class="conteudo pt-1 mt-0 h-100 text-light text-center" style="border-radius: 0 0 15px 15px;">
+
+
+                    <div id="1" class="page py-5 ">
+                        <h1 class="my-1">MENU</h1>
+                        <a href="#?page=2" class="btn btn-light my-1" style="width:90%;">
+                            <h3>Perfil</h3>
+                        </a>
+                        <a href="#?page=3 " class="btn btn-light my-1" style="width:90%;">
+
+                            <h3>Stacks</h3>
+
+                        </a>
+                        <a href="#?page=4 " class="btn btn-light my-1" style="width:90%;">
+
+                            <h3>Experiências</h3>
+
+                        </a>
+                        <a href="#?page=5 " class="btn btn-light my-1" style="width:90%;">
+
+                            <h3>Acadêmico</h3>
+
+                        </a>
+                        <div>
+                            :)
+                        </div>
+                    </div>
+
+                    <div id="2" class="page py-5">
+                        <h1>Perfil</h1>
+                        <img class="rounded-circle" src="https://avatars.githubusercontent.com/u/32580254" alt="">
+                        <hr>
+                        <h5>DADOS</h5>
+                        <p><strong>Nome:</strong> Wesley Benício</p>
+                        <p><strong>Github:</strong> Wesbdss</p>
+                        <p><strong>Idade: </strong><span id="idade"></span> </p>
+                        <p><strong>Email: </strong>wesleybenicio4@gmail.com</p>
+                        <p><strong>Esporte: </strong>Basquete</p>
+                        <a href="#?page=1 " class="btn btn-light my-1" style="width:90%;">
+                            <h3>Voltar</h3>
+                        </a>
+
+                    </div>
+                    <div id="3" class="page py-5">
+                        <h1>Stacks</h1>
+                        <div>
+                            <canvas id="myChart"></canvas>
+
+                        </div>
+                        <a href="#?page=1" class="btn btn-light my-1" style="width:90%;">
+
+                            <h3>Voltar</h3>
+                        </a>
+
+                    </div>
+                    <div id="4" class="page py-5">
+                        <h1>Experiências</h1>
+                        <table class="table table-hover table-light ">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Empresa</th>
+                                    <th scope="col">Tempo</th>
+                                    <th scope="col">Cargo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">0</th>
+                                    <td>Hackathons</td>
+                                    <td>4 Vit.</td>
+                                    <td>Líder/Dev</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>UFG</td>
+                                    <td>Estágio</td>
+                                    <td>Monitor</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Lucas Tecnologia</td>
+                                    <td>1 mês</td>
+                                    <td>Frontend (C#/Razor)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Computroni</td>
+                                    <td>~2 anos</td>
+                                    <td>Leader/FullStack (Javascript)</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>NEOSILOS</td>
+                                    <td>~1 anos</td>
+                                    <td>FullStack (Python)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Salutho</td>
+                                    <td>3 meses</td>
+                                    <td>Backend (Python)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="#?page=1 " class="btn btn-light my-1" style="width:90%;">
+                            <h3>Voltar</h3>
+                        </a>
+
+                    </div>
+                    <div id="5" class="page py-5">
+                        <h1>Acadêmicos</h1>
+                        <table class="table table-hover table-light ">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Instituição</th>
+                                    <th scope="col">Curso</th>
+                                    <th scope="col">Fim</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>SoftBlue</td>
+                                    <td>Lógica de Programação</td>
+                                    <td>Concluído</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>UFG</td>
+                                    <td>Ciências da Computação</td>
+                                    <td>2022/1</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Alura</td>
+                                    <td>Jenkins</td>
+                                    <td>Concluído</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Balta.io</td>
+                                    <td>C# MVC</td>
+                                    <td>Concluído</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                        <a href="#?page=1" class="btn btn-light my-1" style="width:90%;">
+                            <h3>Voltar</h3>
+                        </a>
+
+                    </div>
                 </div>
 
             </div>
-            <div class="col-md-6" style="color: white;">
-                <div class="col-md-12" style="padding-top: 12%;">
-                    <strong style="font-size: 2vw;">Resumo</strong>
-                    <hr>
-                </div>
-                <div class="col-md-12">
-                    Sou programador Python a 3 anos, com aplicação em trabalhos e
-                    Hackathons, atualmente na área de pesquisa sobre chatbots e
-                    PNL (Processamento de Linguagem Natural). Aprofundando
-                    atualmente ferramentas FontEnd como React,js e mobile com
-                    Flutter. Em busca de experiência com trabalhos remotos.</div>
-                <div class="col-md-12" style="padding-top: 10%;">
-                    <strong style="font-size: 2vw;">Experiência</strong>
-                    <hr>
-                </div>
-                <div class="col-md-12">
-                    Nenhuma :(, me contrata pf
-                </div>
-                <div class="col-md-12" style="padding-top: 10%;">
-                    <Strong style="font-size: 2vw;">Educação</Strong>
-                    <hr>
-                </div>
-                <div class="col-md-12">
-                    Bacharelado: <strong>Ciência da Computação</strong> - 2017-2021 <br> <strong>Universidade
-                        Federal de
-                        Goiás - RC</strong>, Catalão,GO.
-                </div>
-            </div>
+            <!-- <img src="/assets/img/smartphone.png " alt=" "> -->
 
         </div>
-        <div class="row" id='inicio'>
-            <div class="col-md-12" style="text-align: center;">
-                <canvas class='papo' id='passive' height="200px" width="200px" hidden></canvas>
-                <img src="./img/sansgif.gif" alt="">
-            </div>
-        </div>
-        <div class="row fontnormal" style="background-color: black; position: relative; bottom: 0; width: 100%;">
-            <div class="col-md-6" style="text-align: left; color: lawngreen;">Inspirado em Undertale</div>
-            <div class="col-md-6" style="text-align: right;color: lawngreen;">Criado por Wesley</div>
-        </div>
-    </div>
 
-    <script src="./js/three.js"></script>
-    <script src="./js/jquery-3.4.1.min.js"></script>
-    <script src="./js/scriptpage.js"></script>
-    <script src="./js/index1.js"></script>
+    </section>
+    <script type="text/javascript" src="assets/js/chart.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js "></script>
+    <script src="assets/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/js/bootstrap.min.js "></script>
+    <script src="assets/js/custom.js "></script>
 </body>
 
 </html>
