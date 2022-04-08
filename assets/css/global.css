@@ -1,0 +1,63 @@
+@import url("/assets/libs/bootstrap/bootstrap-icons.css");
+:root {
+    --primary-color: #041C32;
+    --secondary-color: #04293A;
+    --terciary-color: #064663;
+    --quartenary-color: #ECB365;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: roboto_regular;
+    src: url('/assets/fonts/roboto/Roboto-Regular.ttf');
+}
+
+* {
+    font-family: roboto_regular;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.linear_gradient_background_1 {
+    opacity: .8;
+    background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color), var(--terciary-color));
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    color: whitesmoke;
+}
+
+.linear_gradient_background_2 {
+    opacity: .8;
+    background: linear-gradient(-45deg, var(--terciary-color), var(--primary-color), var(--terciary-color));
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    color: whitesmoke;
+}
+
+.ml4 {
+    position: relative;
+    font-weight: 900;
+    font-size: 4.5em;
+}
+
+.ml4 .letters {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0.3em;
+    right: 0;
+    opacity: 0;
+}
