@@ -1,98 +1,88 @@
+$("#root").html("");
 
-//components
-let last = "1"
-$("#" + last).show("fast", "swing")
-function state() {
-    let value = window.location.href.split("?")[1].split("=")[1]
+var color_reserved = "#b9d9f2";
+var color_terminal = "#4AF626";
+var reserved_words = ["time"]
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-    if (!value) {
-        value = "1"
+function find_reserved_word(line){
+    for(let i in reserved_words){
+        line = line.replace(reserved_words[i], "<span style='color:"+color_reserved+"'>"+reserved_words[i]+"</span>");
     }
-    if (last == value) return
-
-    $("#" + last).hide("fast", "swing")
-    last = value
-
-    $("#" + value).show("fast", "swing")
+    return line;
 }
-setInterval(state, 300)
 
-function timeNow() {
-    data = new Date()
-    $("#time").text(data.getHours() + ":" + data.getMinutes())
-}
-timeNow()
-
-setInterval(timeNow, 1000)
-
-function getIdade() {
-    data = new Date()
-    $("#idade").text(data.getFullYear() - 1999)
-
-}
-getIdade()
-
-
-function chart() {
-
-
-
-    const DATA_COUNT = 5;
-    const NUMBER_CFG = { count: DATA_COUNT, min: 0, max: 100 };
-    const CHART_COLORS = {
-        red: 'rgba(255, 99, 132,.5)',
-        orange: 'rgba(255, 159, 64,.5)',
-        yellow: 'rgba(255, 205, 86,.5)',
-        green: 'rgba(75, 192, 192,.5)',
-        blue: 'rgba(54, 162, 235,.5)',
-        purple: 'rgba(153, 102, 255,.5)',
-        grey: 'rgba(201, 203, 207,.5)'
-    };
-    
-    const labels = ['Python', 'Jenkins', 'Linux', 'NoSQL', 'Docker',"Java", "NodeJs/React"];
-    const data = {
-        labels: labels,
-        datasets: [
-            {
-                label: 'My Stacks',
-                data: [89, 70, 75, 80, 90,20,70],
-                backgroundColor: [
-                    CHART_COLORS.red,
-                    CHART_COLORS.orange,
-                    CHART_COLORS.yellow,
-                    CHART_COLORS.green,
-                    CHART_COLORS.blue,
-                    CHART_COLORS.purple,
-                    CHART_COLORS.grey,
-                ]
-            }
-        ]
-    };
-
-    const config = {
-        type: 'polarArea',
-        data: data,
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                    labels:{
-                        size:20
-                    }
-                },
-                title: {
-                    display: true,
-                    text: 'Mys Stacks'
+function transform_json_to_lines(json){
+    let lines = ["{"];
+    if (typeof(json) == "object" && Object.keys(json).length > 0){
+        for(let i in Object.keys(json)){
+            if (typeof(json[Object.keys(json)[i]]) == "object" && Object.keys(json[Object.keys(json)[i]]).length > 0){
+                lines.push("&emsp;"+Object.keys(json)[i]+" {");
+                for(let j in Object.keys(json[Object.keys(json)[i]])){
+                    lines.push("&emsp; &emsp;"+Object.keys(json[Object.keys(json)[i]])[j]+": "+json[Object.keys(json)[i]][Object.keys(json[Object.keys(json)[i]])[j]]);
                 }
-            }
-        },
-    };
-
-    const myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-    );
+                lines.push("&emsp;"+" }");
+            }else
+            lines.push("&emsp;"+Object.keys(json)[i]+": "+json[Object.keys(json)[i]]);
+        }
+    }
+    lines.push("}");
+    return lines;
 }
-chart()
+
+async function write_console(line, time){
+    time = time || 20;
+    let paused = false;
+    let cache = "";
+    let elem = $("#root");
+    line = await find_reserved_word(line);
+    for(let i in line){
+        if(line[i] == "<" || line[i] == "&" )paused = true;
+        if(paused) cache += line[i];
+        else{
+            elem.html(elem.html()+line[i]);
+            await sleep(time);
+        }
+        if(line[i] == ">" || line[i] == ";" ){
+            paused = false
+            if(cache) {
+                elem.html(elem.html()+cache);
+                cache = "";
+            }
+        };
+    }
+}
+
+
+
+let data_text = transform_json_to_lines(data)
+async function write_data(data){
+    for(let i in data){
+        await window.scrollTo(0, document.body.scrollHeight);
+        await write_console(data[i],30);
+        await write_console("<br>",50);
+        await window.scrollTo(0, document.body.scrollHeight);
+    }
+}
+
+async function main(){
+    
+    await write_data([
+        "Welcome to my resume!",
+        "",
+    ], 50);
+
+    await write_data(data_text,30);
+
+    await write_data([
+        "",
+        "Thank you for visiting!!",
+        "I see you later!",
+    ], 50);
+}
+
+main();
+
